@@ -94,7 +94,8 @@
 .burger-dropdown.active {
     opacity: 1;
     visibility: visible;
-    transform: translateY(-32px);
+    transform: translateY(-37px);
+    // transform: translateY(-32px);
 }
 
 .burger-dropdown__content {

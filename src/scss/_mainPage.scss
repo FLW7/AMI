@@ -24,17 +24,77 @@
     }
 
     .wrapper {
+        display: flex;
+        justify-content: center;
+        align-self: center;
         position: absolute;
-        bottom: 70px;
+        // bottom: 70px;
         
         .text {
             display: flex;
             flex-direction: column;
-            gap: 30px;
+            align-items: center;
+            gap: 70px;
             padding: 0 20px;
 
             p {
                 max-width: 373px;
+            }
+
+            .text-container {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                gap: 30px;
+
+                .top-list {
+                    font-family: 'Montserrat-semi';
+                    font-weight: 600;
+                    font-style: SemiBold;
+                    font-size: 18px;
+                    line-height: 130%;
+                    letter-spacing: 0px;
+                    color: #fff;
+                }
+
+                .text1 {
+                    max-width: 600px;
+                }
+            }
+
+            .mark-container {
+                display: flex;
+                width: 100%;
+                max-width: 650px;
+                justify-content: space-between;
+
+                .warp-block {
+                    display: flex;
+                    .img-con {
+                        margin-right: 10px;
+                        img {
+                            width: 100%;
+                            box-sizing: border-box;
+                            object-fit: cover;
+                        }
+                    }
+                    .text-wrap {
+                        .stroke {
+                            font-family: 'Montserrat-bold';
+                            font-weight: 700;
+                            font-size: 18px;
+                            line-height: 130%;
+                            letter-spacing: 0px;
+                            color: #fff;
+                        }
+                    }
+                }
+                .stick {
+                    width: 1px;
+                    height: 100%;
+                    background-color: #fff;
+                }
             }
 
             .btn-container {
@@ -52,15 +112,11 @@
                     width: 100%;
                     max-width: 270px;
                     padding: 16.5px 10px;
-                }
-                .btn-item:nth-child(1) {
-                    background-color: #fff;
-                    color: #252324;
                     transition: .3s ease;
 
                     &:hover {
-                        background-color: transparent;
-                        color: #fff;
+                        background-color: #fff;
+                        color: #252324;
                         transition: .3s ease;
                     }
                 }
@@ -122,11 +178,11 @@
         margin-top: 20px;
     }
 }
-@media (max-width:1500px) {
+@media (max-width:1000px) {
     .main-sec {
         .text {
             .title {
-                font-size: clamp(40px, 5vw, 72px);
+                font-size: clamp(40px,7.6vw, 72px);
             }
             .text1 {
                 font-size: clamp(15px, 2vw, 18px);
@@ -134,10 +190,7 @@
         }
     }
     .main-sec .wrapper .text {
-        gap: clamp(10px, 2vw, 30px);
-    }
-    .main-sec .wrapper {
-        bottom: clamp(50px, 10vw, 70px);
+        gap: clamp(50px, 6vw, 70px);
     }
     .main-sec .wrapper .text .btn-container .btn-item {
         font-size: clamp(15px, 2vw, 18px);
@@ -146,7 +199,7 @@
 }
 @media (max-width:768px) {
     .main-sec {
-        height: clamp(620px,20vw,710px);
+        height: clamp(747px,20vw,710px);
         width: 100%;
     }
 }
@@ -166,10 +219,24 @@
         width: 100%;
         max-width: none;
     }
-}
 
-@media (max-width:608px) {
-    .main-sec .bg-img {
-        transform: translateX(53%);
+    .main-sec .wrapper .text .mark-container .warp-block {
+        flex-wrap: wrap;
+        max-width: 180px;
+        text-align: center;
+        justify-content: center;
+    }
+    .main-sec .wrapper .text .mark-container .stick {
+        opacity: 0.4;
+    }
+    .main-sec .wrapper .text .mark-container {
+        justify-content: center;
+        gap: 41px;
+    }
+    .main-sec .wrapper .text .mark-container .warp-block .text-wrap .adaptiv-fz-mark {
+        font-size: clamp(14px, 2vw, 18px);
+    }
+    .main-sec .wrapper .text {
+        margin-top: 71px;
     }
 }
