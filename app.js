@@ -215,8 +215,7 @@ document.addEventListener('DOMContentLoaded', function() {
     burgerOverlay.addEventListener('click', closeBurgerMenu);
     
     burgerLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
+        link.addEventListener('click', function() {
             closeBurgerMenu();
         });
     });
