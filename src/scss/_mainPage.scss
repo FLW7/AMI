@@ -49,6 +49,10 @@
                 align-items: center;
                 gap: 30px;
 
+                .title {
+                    br {display: none;}
+                }
+
                 .top-list {
                     font-family: 'Montserrat-semi';
                     font-weight: 600;
@@ -230,5 +234,11 @@
     }
     .main-sec .wrapper .text {
         margin-top: 71px;
+    }
+}
+
+@media (max-width:500px) {
+    .main-sec .wrapper .text .text-container .title br {
+        display: block;
     }
 }
