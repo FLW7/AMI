@@ -293,7 +293,7 @@
                     <button class="btn">Скачать</button>
                 </div>
                 <div class="pic">
-                    <img src="./src/img/картинка.png" alt="">
+                    <img src="./src/img/картинка.webp" alt="">
                 </div>
             </div>
         </section>
@@ -422,7 +422,7 @@
                             behaviors: ['default', 'scrollZoom']
                         });
                     
-                        // Ваш SVG маркер (использую ваш оригинальный с лого)
+                        // SVG
                         const svgIcon = `<svg width="70" height="93" viewBox="0 0 70 93" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <rect x="34" y="67" width="2" height="26" rx="1" fill="#252424"/>
                             <g clip-path="url(#clip0_10_202)">
@@ -441,7 +441,7 @@
                             </defs>
                             </svg>`;
                     
-                        // Конвертируем SVG в base64
+                        // SVG в base64
                         const base64Icon = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(svgIcon)));
                     
                         
@@ -460,7 +460,7 @@
                             }
                         ];
                         
-                        // Добавляем метки на карту
+                        // Добавляем метки
                         const placemarks = [];
                         
                         locations.forEach(location => {
@@ -480,8 +480,8 @@
                                 },
                                 {
                                     iconLayout: 'default#image',
-                                    iconImageHref: base64Icon,
-                                    iconImageSize: [40, 53], // Уменьшил размер для лучшего вида
+                                    iconImageHref: './src/img/marker.png',
+                                    iconImageSize: [40, 53], 
                                     iconImageOffset: [-20, -53]
                                 }
                             );
@@ -501,7 +501,7 @@
                             });
                         }
 
-                        // Обновляем размер карты при изменении размера окна
+                        // Обновляем размер карты
                         window.addEventListener('resize', () => {
                             map.container.fitToViewport();
                         });
