@@ -12,6 +12,7 @@
 @import './burger';
 @import './swiper';
 @import './imgBlock';
+@import './popupReservBtn';
 
 *{
     margin: 0;
@@ -33,6 +34,7 @@ section[id] {
 }
 
 .block {
+    z-index: 0;
     box-sizing: border-box;
     padding: 0 20px;
     width: 100%;

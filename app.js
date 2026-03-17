@@ -297,3 +297,75 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+
+const popup = document.querySelector('.popup_button_reserv');
+    const overlay = document.querySelector('.overlay');
+    const closeButton = document.querySelector('.popup_button_reserv .close');
+    
+    // Функция открытия попапа
+    function openPopup(event) {
+        if (event) event.preventDefault();
+        
+        popup.style.display = 'flex';
+        overlay.style.opacity = '1';
+        overlay.style.pointerEvents = 'auto';
+        document.body.style.overflow = 'hidden';
+        
+        // Центрируем попап
+        centerPopup();
+    }
+    
+    // Функция центрирования попапа
+    function centerPopup() {
+        popup.style.top = '50%';
+        popup.style.left = '50%';
+        popup.style.transform = 'translate(-50%, -50%)';
+    }
+    
+    // Функция закрытия попапа
+    function closePopup() {
+        popup.style.display = 'none';
+        overlay.style.opacity = '0';
+        overlay.style.pointerEvents = 'none';
+        document.body.style.overflow = '';
+    }
+    
+    // Слушаем клики по всей странице
+    document.addEventListener('click', function(event) {
+        // Проверяем, есть ли у элемента или его родителя id="reserved"
+        const target = event.target.closest('#reserved');
+        
+        if (target) {
+            openPopup(event);
+        }
+    });
+    
+    if (closeButton) {
+        closeButton.addEventListener('click', closePopup);
+    }
+    
+    if (overlay) {
+        overlay.addEventListener('click', closePopup);
+    }
+    
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closePopup();
+        }
+    });
+    
+    // Центрируем попап при изменении размера окна
+    window.addEventListener('resize', function() {
+        if (popup.style.display === 'flex') {
+            centerPopup();
+        }
+    });
+    
+    // Изначально скрываем попап
+    popup.style.display = 'none';
+    overlay.style.opacity = '0';
+    overlay.style.pointerEvents = 'none';
+    
+    // Добавляем CSS для центрирования
+    popup.style.position = 'fixed';

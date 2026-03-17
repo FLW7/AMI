@@ -214,9 +214,12 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    .main-sec .wrapper .text .btn-container .btn-item:nth-child(1) {
+    .main-sec .wrapper .text .btn-container .btn_link ,
+    .main-sec .wrapper .text .btn-container .btn_link .btn-item {
+        max-width: none;
+    }
+    .main-sec .wrapper .text .btn-container .btn_link:nth-child(1) {
         grid-column: span 2;
-        width: 100%;
         max-width: none;
     }
 

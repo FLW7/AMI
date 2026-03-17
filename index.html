@@ -358,11 +358,8 @@
 
                                     <!-- Кнопка -->
                                     <button
-                                        onclick="
-                                            window.location.href =
-                                                'https://leclick.ru/restaurants/partner-reserve/id/21445/creator/restaurant-website'
-                                        "
                                         class="btn burger-dropdown__btn"
+                                        id="reserved"
                                     >
                                         Забронировать стол
                                     </button>
@@ -378,8 +375,25 @@
                     </ul>
                 </div>
             </header>
-
             <section class="main-sec">
+                <section class="popup_button_reserv">
+                    <div class="over-b">
+                        <div class="close">
+                            <img src="./src/img/close.png" alt="закрыть">
+                        </div>
+                        <div class="wrapper_button_con">
+                            <div class="text_container">
+                                <h2>Выберите филиал</h2>
+                                <p class="text1">Выберите ресторан, в котором хотите забронировать стол</p>
+                            </div>
+                            <div class="btn_resrv_con">
+                                <button class="popup_btn text1" onclick="window.open('https://leclick.ru/restaurants/partner-reserve/id/21445/creator/restaurant-website', '_blank')">Ленинградский проспект</button>
+                                <button class="popup_btn text1" onclick="window.open('https://leclick.ru/restaurants/partner-reserve/id/20401/creator/restaurant-website', '_blank')">Нижняя Красносельская</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="overlay"></div>
                 <div class="bg-img">
                     <img src="./src/img/main.png" alt="main" />
                 </div>
@@ -441,12 +455,17 @@
                                 ><button class="btn-item">Доставка</button></a
                             >
                             <button
-                                onclick="window.location.href = '#restorany'"
                                 class="btn-item"
+                                id="reserved"
                             >
                                 Забронировать
                             </button>
-                            <button class="btn-item">Позвонить</button>
+                            <a  
+                                class="btn_link"
+                                href="tel:+74996536407"
+                                title="Позвонить в ресторан по номеру +7 499 653-64-07">
+                                <button class="btn-item">Позвонить</button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -491,15 +510,16 @@
                             </p>
                         </div>
                         <ul class="nav">
-                            <a
-                                href="./src/menu-dinamo.pdf"
-                                target="_blank"
-                            >
+                            <a href="./src/menu-dinamo.pdf" target="_blank">
                                 <li class="list-item adapt-text">Меню PDF</li>
                             </a>
-                            <li class="list-item adapt-text">Позвонить</li>
+                            <a href="tel:+74996536407"
+                                title="Позвонить в ресторан по номеру +7 499 653-64-07">
+                                <li class="list-item adapt-text">Позвонить</li>
+                            </a>
                             <a
-                                href="https://leclick.ru/restaurants/partner-reserve/id/21445/creator/restaurant-website"
+                                href="https://leclick.ru/restaurants/partner-reserve/id/21445/creator/restaurant-website"  
+                                target="_blank"
                             >
                                 <li class="list-item adapt-text">
                                     Забронировать
@@ -530,7 +550,10 @@
                             >
                                 <li class="list-item adapt-text">Меню PDF</li>
                             </a>
-                            <li class="list-item adapt-text">Позвонить</li>
+                            <a href="tel:+74996536407"
+                                title="Позвонить в ресторан по номеру +7 499 653-64-07">
+                                <li class="list-item adapt-text">Позвонить</li>
+                            </a>
                             <a
                                 href="https://leclick.ru/restaurants/partner-reserve/id/20401/creator/restaurant-website"
                                 target="_blank"
@@ -582,7 +605,7 @@
                             столик, и менеджер свяжется с вами по поводу
                             деталей.
                         </p>
-                        <button class="btn">Забронировать</button>
+                        <button class="btn" id="reserved">Забронировать</button>
                     </div>
                 </div>
             </section>
@@ -606,7 +629,7 @@
                                 и специальных предложениях.
                             </p>
                         </div>
-                        <button class="btn">Скачать</button>
+                        <button class="btn" onclick="window.open('https://amichaise-panel.s2.sellkit.ru/NewApi/Misc/RedirectToApp.php', '_blank')">Скачать</button>
                     </div>
                     <div class="pic">
                         <img src="./src/img/картинка.webp" alt="" />
@@ -887,7 +910,7 @@
                                 </p>
                                 <ul>
                                     <li class="nav-item adapt-text">
-                                        <a href="https://menu.amichaise.ru"
+                                        <a href="https://menu.amichaise.ru" target="_blank"
                                             title="Меню доставки Ami Chaise">Доставка</a>
                                     </li>
                                     <li class="nav-item adapt-text">
