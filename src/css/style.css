@@ -687,6 +687,7 @@ header.scrolled .wrapper {
 .block4 {
     display: flex;
     flex-direction: column;
+    z-index: 10 !important;
 }
 .block4 h2 {
     font-family: "Montserrat-semi";
@@ -833,7 +834,7 @@ header.scrolled .wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 100000 !important;
     opacity: 0;
     visibility: hidden;
     transition:
@@ -1115,6 +1116,7 @@ header.scrolled .wrapper {
 }
 .contact {
     display: flex;
+    z-index: -100;
 }
 .contact .title-top {
     font-family: "Montserrat-semi";
@@ -1765,7 +1767,7 @@ header.scrolled .wrapper {
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
+    z-index: 10000;
     opacity: 0;
     transition: all 0.3s ease;
 }
